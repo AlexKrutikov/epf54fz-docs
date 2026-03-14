@@ -1,0 +1,46 @@
+:root {
+    /* div.image-bg {
+        width: 100%!important;
+        height: auto!important;
+    } */
+
+    img.VPImage.image-src {
+        border-radius: 0.4rem;
+        width: 100%!important;
+        height: auto!important;
+    };
+    
+    --vp-layout-max-width: 768px !important;
+}
+
+:lang(ru) {
+    --vp-code-copy-copied-text-content: 'Скопировано';
+}
+
+.VPDoc .content-container {
+    max-width: var(--vp-layout-max-width) !important;
+}
+
+@media (min-width: 768px) {
+    :root {
+        --vp-layout-max-width: 768px !important;
+    }
+}
+
+@media (min-width: 1440px) {
+    :root {
+        --vp-layout-max-width: 1440px !important;
+    }
+}
+
+@media (min-width: 1856px) {
+    :root {
+        --vp-layout-max-width: 1856px !important;
+    }
+}
+
+@media (min-width: 2560px) {
+    :root {
+        --vp-layout-max-width: 2560px !important;
+    }
+}
