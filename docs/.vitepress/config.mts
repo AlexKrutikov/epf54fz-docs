@@ -50,7 +50,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Alexander Krutikov',
+      message: 'Alexander Krutikov · Itida LLC',
       copyright: `© Infostart ${new Date().getFullYear()} | Все права защищены`
     },
 
