@@ -4,8 +4,8 @@ node_modules/
 # VitePress build output
 docs/.vitepress/dist/
 
-# Сгенерированные PDF (vitepress-export-pdf)
-vitepress-*.pdf
+# Сгенерированные PDF (vitepress-export-pdf): docs:pdf / docs:pdf:history
+*.pdf
 
 # VitePress cache
 docs/.vitepress/cache/
