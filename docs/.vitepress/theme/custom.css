@@ -44,3 +44,37 @@
         --vp-layout-max-width: 2560px !important;
     }
 }
+
+/* PDF/печать: убираем хром сайта (навбар, сайдбар, правый outline, футеры).
+   Применяется только в print-медиа — на экране ничего не меняется.
+   Используется при выгрузке через vitepress-export-pdf (puppeteer печатает в print-режиме). */
+@media print {
+    .VPNav,
+    .VPLocalNav,
+    .VPSidebar,
+    .VPDocAside,
+    .VPDocFooter,
+    .VPFooter,
+    .VPBackdrop,
+    .DocSearch,
+    .VPNavBar {
+        display: none !important;
+    }
+
+    /* контент на всю ширину без отступа, который резервировался под сайдбар */
+    .VPContent,
+    .VPContent.has-sidebar {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .VPDoc {
+        padding: 0 !important;
+    }
+    .VPDoc .container,
+    .VPDoc .content,
+    .VPDoc .content-container {
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+}
