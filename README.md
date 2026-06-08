@@ -1,46 +1,50 @@
-# Документация VitePress
+# Документация: обработка обслуживания ККМ для 1С (54-ФЗ)
+
+Исходники сайта документации по обработке обслуживания фискальных регистраторов и онлайн-касс для 1С в соответствии с требованиями 54-ФЗ, системы маркировки и разрешительного режима.
+
+Поддерживаемые ККТ: **Атол**, **Штрих**, **Дримкас** (Вики Принт), **Инкотекс** (Меркурий).
+
+Сайт собран на [VitePress](https://vitepress.dev) и публикуется на GitHub Pages:
+**https://alexkrutikov.github.io/epf54fz-docs/**
+
+Приобрести само решение можно [на Инфостарт](https://infostart.ru/marketplace/345395).
 
 ## Быстрый старт
 
 ```bash
 npm install
-npm run docs:dev
+npm run docs:dev      # локальный сервер с горячей перезагрузкой
 ```
 
-Откроется на http://localhost:5173
-
-## Сборка
+## Сборка и предпросмотр
 
 ```bash
-npm run docs:build
+npm run docs:build    # статическая сборка в docs/.vitepress/dist (проверяет битые ссылки)
+npm run docs:preview  # предпросмотр собранного сайта
 ```
 
 ## Структура
 
 ```
 docs/
-├── index.md              # Главная страница
+├── index.md                # Главная (навигационные карточки)
+├── history/index.md        # История изменений (changelog)
+├── instructions/           # Разделы руководства
+│   ├── index.md            #   лендинг с группировкой по темам
+│   ├── install-drivers.md  #   установка драйверов ККТ
+│   ├── handler-settings.md #   настройка параметров обработки
+│   ├── marking.md          #   маркировка / разрешительный режим
+│   ├── ffd105.md           #   работа с чеками (ФФД 1.05 и выше)
+│   └── …                   #   прочие разделы
 ├── .vitepress/
-│   └── config.mts        # Конфиг VitePress (nav, sidebar)
-└── guide/
-    ├── install-drivers.md
-    ├── install-handler.md
-    ├── update-handler.md
-    ├── user-params.md
-    ├── rpc-network.md
-    ├── print-queue.md
-    ├── handler-settings.md
-    ├── cash-orders.md
-    ├── fz54-features.md
-    ├── ffd105.md
-    ├── cash-register-ext.md
-    ├── correction-checks.md
-    ├── gift-cards.md
-    ├── agent-scheme.md
-    └── permit-mode.md
+│   ├── config.mts          # конфиг VitePress (base = /epf54fz-docs/)
+│   ├── navbar.ts           # верхнее меню
+│   └── sidebar.ts          # боковое меню
+└── public/images/          # изображения (ссылки вида /images/…)
 ```
 
-## Изображения
+## Публикация
 
-Скопируйте папку `media/` из исходного документа в `docs/public/images/`.
-Все изображения в .md файлах ссылаются на `/images/imageN.png`.
+Деплой автоматический через GitHub Actions (`.github/workflows/deploy.yml`) при пуше в `main`.
+Для работы на GitHub Pages в конфиге задан `base: '/epf54fz-docs/'`.
+При переезде на собственный домен — вернуть `base: '/'` и добавить `CNAME` в `docs/public/`.
