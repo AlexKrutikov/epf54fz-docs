@@ -4,8 +4,11 @@ node_modules/
 # VitePress build output
 docs/.vitepress/dist/
 
-# Сгенерированные PDF (vitepress-export-pdf): docs:pdf / docs:pdf:history
-*.pdf
+# Сгенерированные PDF (vitepress-export-pdf): docs:pdf / docs:pdf:history.
+# Только в корне — статичные PDF в docs/public/ остаются под версией.
+/Руководство.pdf
+/Список изменений.pdf
+/vitepress-*.pdf
 
 # VitePress cache
 docs/.vitepress/cache/

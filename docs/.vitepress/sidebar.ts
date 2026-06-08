@@ -51,5 +51,11 @@ export const sidebar = [
         items: [
             { text: 'Передача ссылки на документ печати', link: '/instructions/print-link' },
         ]
+    },
+    {
+        text: 'Справочные материалы',
+        items: [
+            { text: 'Методические рекомендации ФНС (54-ФЗ)', link: '/instructions/method-recommendations' },
+        ]
     }
 ]
