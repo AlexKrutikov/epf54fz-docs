@@ -4,6 +4,10 @@ import { sidebar } from './sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  // Project-страница GitHub Pages: https://alexkrutikov.github.io/epf54fz-docs/
+  // При переезде на собственный домен (CNAME) или репозиторий <user>.github.io
+  // значение base нужно вернуть к '/'.
+  base: '/epf54fz-docs/',
   locales: {
     root: {
       label: 'Русский',

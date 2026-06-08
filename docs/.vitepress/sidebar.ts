@@ -26,8 +26,16 @@ export const sidebar = [
         items: [
             { text: 'Пробитие чеков из кассовых ордеров', link: '/instructions/cash-orders' },
             { text: 'Особенности работы с обработкой ФЗ.54', link: '/instructions/fz54-features' },
-            { text: 'Пробитие чеков по формату ФФД 1.05', link: '/instructions/ffd105' },
+            { text: 'Пробитие чеков по формату ФФД 1.05 и выше', link: '/instructions/ffd105' },
             { text: 'Чеки коррекции', link: '/instructions/correction-checks' },
+        ]
+    },
+    {
+        text: 'Маркировка и разрешительный режим',
+        items: [
+            { text: 'Модуль «Маркировка»', link: '/instructions/marking' },
+            { text: 'Исправление марок', link: '/instructions/marking-fix' },
+            { text: 'Разрешительный режим', link: '/instructions/permit-mode' },
         ]
     },
     {
@@ -36,7 +44,12 @@ export const sidebar = [
             { text: 'Внешняя обработка «Работа с кассой»', link: '/instructions/cash-register-ext' },
             { text: 'Работа с подарочными картами', link: '/instructions/gift-cards' },
             { text: 'Работа по агентской схеме', link: '/instructions/agent-scheme' },
-            { text: 'Разрешительный режим', link: '/instructions/permit-mode' },
+        ]
+    },
+    {
+        text: 'Доработка конфигурации',
+        items: [
+            { text: 'Передача ссылки на документ печати', link: '/instructions/print-link' },
         ]
     }
 ]

@@ -5,7 +5,7 @@ title: Главная
 
 hero:
   image: 
-    src: logo/infostart-logo.png
+    src: /logo/infostart-logo.png
     alt: Logo
   name: "54-ФЗ и Разрешительный режим"
   text: ""
