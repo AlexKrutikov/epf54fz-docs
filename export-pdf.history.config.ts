@@ -8,4 +8,9 @@
 export default {
   routePatterns: ['!/**', '**/history/**', '**/history/', '**/history'],
   outFile: 'Список изменений.pdf',
+  // поля страницы и хром заданы в custom.css (@page / @media print)
+  pdfOptions: {
+    format: 'A4',
+    printBackground: true,
+  },
 }

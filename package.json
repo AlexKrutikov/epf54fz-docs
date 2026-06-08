@@ -5,7 +5,7 @@
     "docs:dev": "vitepress dev docs",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "docs:pdf": "press-export-pdf export docs --outFile \"Руководство.pdf\"",
+    "docs:pdf": "press-export-pdf export docs -c export-pdf.full.config.ts",
     "docs:pdf:history": "press-export-pdf export docs -c export-pdf.history.config.ts"
   },
   "devDependencies": {
