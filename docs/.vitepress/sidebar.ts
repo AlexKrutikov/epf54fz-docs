@@ -36,6 +36,7 @@ export const sidebar = [
             { text: 'Модуль «Маркировка»', link: '/instructions/marking' },
             { text: 'Исправление марок', link: '/instructions/marking-fix' },
             { text: 'Разрешительный режим', link: '/instructions/permit-mode' },
+            { text: 'ТС ПИоТ', link: '/instructions/piot' },
         ]
     },
     {
