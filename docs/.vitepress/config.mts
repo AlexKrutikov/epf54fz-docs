@@ -1,9 +1,30 @@
 import { defineConfig } from 'vitepress'
 import { navbar } from './navbar'
 import { sidebar } from './sidebar'
+import { YM_COUNTER_ID } from './metrika'
+
+// Счётчик Яндекс Метрики подключаем только в production-сборке (vitepress build),
+// чтобы локальный запуск (vitepress dev) не засорял статистику. Хиты отправляются
+// вручную из темы (defer: true) — см. docs/.vitepress/theme/index.ts.
+const isProd = process.env.NODE_ENV === 'production'
+const metrikaHead: any[] = isProd && YM_COUNTER_ID
+  ? [
+      [
+        'script',
+        {},
+        `(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(${YM_COUNTER_ID},"init",{defer:true,clickmap:false,trackLinks:true,accurateTrackBounce:true,webvisor:false});`
+      ],
+      [
+        'noscript',
+        {},
+        `<div><img src="https://mc.yandex.ru/watch/${YM_COUNTER_ID}" style="position:absolute;left:-9999px;" alt="" /></div>`
+      ]
+    ]
+  : []
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  head: metrikaHead,
   // Project-страница GitHub Pages: https://alexkrutikov.github.io/epf54fz-docs/
   // При переезде на собственный домен (CNAME) или репозиторий <user>.github.io
   // значение base нужно вернуть к '/'.
