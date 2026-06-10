@@ -1,0 +1,5 @@
+{
+  // VitePreview: запускать VitePress с корнем docs/, чтобы кэш и dist
+  // создавались в docs/.vitepress/, а не в корне рабочей области.
+  "vp.docsDir": "docs"
+}

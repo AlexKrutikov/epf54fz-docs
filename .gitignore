@@ -2,7 +2,7 @@
 node_modules/
 
 # VitePress build output
-docs/.vitepress/dist/
+**/.vitepress/dist/
 
 # Сгенерированные PDF (vitepress-export-pdf): docs:pdf / docs:pdf:history.
 # Только в корне — статичные PDF в docs/public/ остаются под версией.
@@ -11,7 +11,7 @@ docs/.vitepress/dist/
 /vitepress-*.pdf
 
 # VitePress cache
-docs/.vitepress/cache/
+**/.vitepress/cache/
 
 # Environment variables
 .env
@@ -31,7 +31,8 @@ Thumbs.db
 desktop.ini
 
 # Editor
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 *.suo
 *.ntvs*
