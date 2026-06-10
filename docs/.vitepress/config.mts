@@ -71,7 +71,7 @@ export default defineConfig({
     ],
 
     footer: {
-      message: 'Alexander Krutikov · Itida LLC',
+      message: 'Alexander Krutikov · Itida LLC · <a href="/epf54fz-docs/privacy.html">Политика обработки данных</a>',
       copyright: `© Infostart ${new Date().getFullYear()} | Все права защищены`
     },
 

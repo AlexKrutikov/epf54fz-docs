@@ -1,9 +1,17 @@
+import { h } from 'vue'
 import DefaultTheme from 'vitepress/theme'
 import './custom.css'
 import { YM_COUNTER_ID } from '../metrika'
+import DataNotice from './components/DataNotice.vue'
 
 export default {
   extends: DefaultTheme,
+  Layout() {
+    // Баннер-уведомление об обработке данных снизу на каждой странице.
+    return h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(DataNotice)
+    })
+  },
   enhanceApp({ router }) {
     // Только в браузере и только если счётчик задан (в dev head не подключается).
     if (import.meta.env.SSR || !YM_COUNTER_ID) return
