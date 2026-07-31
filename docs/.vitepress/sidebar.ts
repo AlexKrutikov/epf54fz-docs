@@ -54,6 +54,12 @@ export const sidebar = [
         ]
     },
     {
+        text: 'Решение проблем',
+        items: [
+            { text: 'Известные проблемы', link: '/instructions/troubleshooting' },
+        ]
+    },
+    {
         text: 'Справочные материалы',
         items: [
             { text: 'Методические рекомендации ФНС (54-ФЗ)', link: '/instructions/method-recommendations' },

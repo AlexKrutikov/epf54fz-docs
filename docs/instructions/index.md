@@ -47,6 +47,10 @@ title: Документация
 
 - [Передача ссылки на документ печати](/instructions/print-link)
 
+## Решение проблем
+
+- [Известные проблемы](/instructions/troubleshooting)
+
 ## Справочные материалы
 
 - [Методические рекомендации ФНС (54-ФЗ)](/instructions/method-recommendations)
