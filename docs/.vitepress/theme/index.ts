@@ -13,6 +13,15 @@ export default {
     })
   },
   enhanceApp({ router }) {
+    // После деплоя GitHub Pages удаляет чанки прежней сборки, и SPA-переход
+    // из открытой ранее вкладки падает с 404 на чанк. По vite:preloadError
+    // перезагружаем страницу целиком — браузер получит свежую сборку.
+    if (!import.meta.env.SSR) {
+      window.addEventListener('vite:preloadError', () => {
+        window.location.reload()
+      })
+    }
+
     // Только в браузере и только если счётчик задан (в dev head не подключается).
     if (import.meta.env.SSR || !YM_COUNTER_ID) return
 
