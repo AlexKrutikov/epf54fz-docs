@@ -19,6 +19,7 @@ export const sidebar = [
         text: 'Настройка',
         items: [
             { text: 'Настройка параметров обработки', link: '/instructions/handler-settings' },
+            { text: 'Режим «ККТ с передачей данных»', link: '/instructions/kkt-mode' },
         ]
     },
     {
@@ -43,6 +44,7 @@ export const sidebar = [
         text: 'Расширенные возможности',
         items: [
             { text: 'Внешняя обработка «Работа с кассой»', link: '/instructions/cash-register-ext' },
+            { text: 'Эквайринг', link: '/instructions/acquiring' },
             { text: 'Работа с подарочными картами', link: '/instructions/gift-cards' },
             { text: 'Работа по агентской схеме', link: '/instructions/agent-scheme' },
         ]

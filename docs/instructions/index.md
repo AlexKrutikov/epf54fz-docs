@@ -23,6 +23,7 @@ title: Документация
 ## Настройка
 
 - [Настройка параметров обработки](/instructions/handler-settings)
+- [Режим «ККТ с передачей данных»](/instructions/kkt-mode)
 
 ## Работа с чеками
 
@@ -36,10 +37,12 @@ title: Документация
 - [Модуль «Маркировка»](/instructions/marking)
 - [Исправление марок](/instructions/marking-fix)
 - [Разрешительный режим](/instructions/permit-mode)
+- [ТС ПИоТ](/instructions/piot)
 
 ## Расширенные возможности
 
 - [Внешняя обработка «Работа с кассой»](/instructions/cash-register-ext)
+- [Эквайринг](/instructions/acquiring)
 - [Работа с подарочными картами](/instructions/gift-cards)
 - [Работа по агентской схеме](/instructions/agent-scheme)
 
