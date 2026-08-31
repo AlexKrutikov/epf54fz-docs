@@ -10,8 +10,9 @@
   // его можно поправить (другая подпапка, говорящее имя файла).
   // Встроенную вставку/перетаскивание картинок VS Code отключаем: она кладёт
   // image.png рядом с .md и вставляет относительную ссылку ![alt text](image.png),
-  // что ломает конвенцию public-путей VitePress. Вставка — Ctrl+Alt+P (Paste Image;
-  // основной Ctrl+Alt+V на этой машине перехватывает Punto Switcher — слот 25 PuntoHotkeys).
+  // что ломает конвенцию public-путей VitePress. Вставка — только Ctrl+Alt+V (Paste Image).
+  // Если хоткей перестал срабатывать — проверить, не занял ли его глобальный перехватчик
+  // (Punto Switcher уже занимал, освобождён 31.08.2026).
   "markdown.editor.filePaste.enabled": false,
   "markdown.editor.filePaste.copyIntoWorkspace": "never",
   "markdown.editor.drop.enabled": false,
