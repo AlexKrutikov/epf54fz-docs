@@ -11,7 +11,9 @@
   // Встроенную вставку/перетаскивание картинок VS Code отключаем: она кладёт
   // image.png рядом с .md и вставляет относительную ссылку ![alt text](image.png),
   // что ломает конвенцию public-путей VitePress. Вставка — только Ctrl+Alt+V (Paste Image).
+  "markdown.editor.filePaste.enabled": false,
   "markdown.editor.filePaste.copyIntoWorkspace": "never",
+  "markdown.editor.drop.enabled": false,
   "markdown.editor.drop.copyIntoWorkspace": "never",
 
   "pasteImage.path": "${projectRoot}/docs/public/images/${currentFileNameWithoutExt}",
