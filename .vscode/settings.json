@@ -8,12 +8,18 @@
   // и вставляет в текст ссылку ![](/images/<имя-страницы>/<файл>.png) —
   // формат public-путей VitePress. Перед сохранением показывается путь,
   // его можно поправить (другая подпапка, говорящее имя файла).
+  // Встроенную вставку/перетаскивание картинок VS Code отключаем: она кладёт
+  // image.png рядом с .md и вставляет относительную ссылку ![alt text](image.png),
+  // что ломает конвенцию public-путей VitePress. Вставка — только Ctrl+Alt+V (Paste Image).
+  "markdown.editor.filePaste.copyIntoWorkspace": "never",
+  "markdown.editor.drop.copyIntoWorkspace": "never",
+
   "pasteImage.path": "${projectRoot}/docs/public/images/${currentFileNameWithoutExt}",
   "pasteImage.basePath": "${projectRoot}/docs/public",
   "pasteImage.prefix": "/",
   "pasteImage.forceUnixStyleSeparator": true,
   "pasteImage.defaultName": "Y-MM-DD_HH-mm-ss",
   "pasteImage.showFilePathConfirmInputBox": true,
-  "pasteImage.filePathConfirmInputBoxMode": "inputBox",
+  "pasteImage.filePathConfirmInputBoxMode": "fullPath",
   "pasteImage.insertPattern": "![](${imageFilePath})"
 }
