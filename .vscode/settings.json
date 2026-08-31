@@ -1,5 +1,19 @@
 {
   // VitePreview: запускать VitePress с корнем docs/, чтобы кэш и dist
   // создавались в docs/.vitepress/, а не в корне рабочей области.
-  "vp.docsDir": "docs"
+  "vp.docsDir": "docs",
+
+  // Paste Image (mushan.vscode-paste-image): Ctrl+Alt+V в открытом .md
+  // сохраняет скриншот из буфера обмена в docs/public/images/<имя-страницы>/
+  // и вставляет в текст ссылку ![](/images/<имя-страницы>/<файл>.png) —
+  // формат public-путей VitePress. Перед сохранением показывается путь,
+  // его можно поправить (другая подпапка, говорящее имя файла).
+  "pasteImage.path": "${projectRoot}/docs/public/images/${currentFileNameWithoutExt}",
+  "pasteImage.basePath": "${projectRoot}/docs/public",
+  "pasteImage.prefix": "/",
+  "pasteImage.forceUnixStyleSeparator": true,
+  "pasteImage.defaultName": "Y-MM-DD_HH-mm-ss",
+  "pasteImage.showFilePathConfirmInputBox": true,
+  "pasteImage.filePathConfirmInputBoxMode": "inputBox",
+  "pasteImage.insertPattern": "![](${imageFilePath})"
 }
