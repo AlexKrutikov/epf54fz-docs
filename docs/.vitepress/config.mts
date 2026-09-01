@@ -38,6 +38,18 @@ export default defineConfig({
   title: "54-ФЗ и Маркировка",
   description: "Обработки для подключения онлайн-касс к 1С",
 
+  markdown: {
+    // Подписи плашек ::: tip / ::: info / ::: warning / ::: danger / ::: details
+    // по умолчанию; явный заголовок после типа (::: warning Внимание) их переопределяет.
+    container: {
+      tipLabel: 'Совет',
+      infoLabel: 'Информация',
+      warningLabel: 'Внимание',
+      dangerLabel: 'Важно',
+      detailsLabel: 'Подробнее'
+    }
+  },
+
   themeConfig: {
     logo: { src: '/logo/logo.png', alt: "Logo", width: "auto", height: "--navbar-line-height" },
     outline: [2, 3],
