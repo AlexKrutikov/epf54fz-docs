@@ -85,3 +85,10 @@
         padding: 0 !important;
     }
 }
+/* Схемы Mermaid (vitepress-plugin-mermaid): подписи узлов и рёбер — html-текст в <p>
+   внутри SVG, и на них действуют абзацные стили .vp-doc (line-height 28px, отступы),
+   из-за чего текст вылезает за рассчитанную Mermaid рамку. Сбрасываем. */
+.vp-doc .mermaid p {
+    margin: 0;
+    line-height: 1.25;
+}

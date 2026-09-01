@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { withMermaid } from 'vitepress-plugin-mermaid'
 import { navbar } from './navbar'
 import { sidebar } from './sidebar'
 import { YM_COUNTER_ID } from './metrika'
@@ -23,7 +24,9 @@ const metrikaHead: any[] = isProd && YM_COUNTER_ID
   : []
 
 // https://vitepress.dev/reference/site-config
-export default defineConfig({
+// withMermaid — рендер блоков ```mermaid в схемы (vitepress-plugin-mermaid), тема
+// светлая/тёмная подхватывается автоматически.
+export default withMermaid(defineConfig({
   head: metrikaHead,
   // Project-страница GitHub Pages: https://alexkrutikov.github.io/epf54fz-docs/
   // При переезде на собственный домен (CNAME) или репозиторий <user>.github.io
@@ -37,6 +40,15 @@ export default defineConfig({
   },
   title: "54-ФЗ и Маркировка",
   description: "Обработки для подключения онлайн-касс к 1С",
+
+  vite: {
+    optimizeDeps: {
+      // fastdom — CommonJS-зависимость mermaid 11; без предсборки dev-сервер падает с
+      // «does not provide an export named 'default'» (withMermaid сам его не добавляет).
+      // Глубокий импорт extensions/… Vite не выводит из основного пакета — указывается отдельно.
+      include: ['fastdom', 'fastdom/extensions/fastdom-promised.js']
+    }
+  },
 
   markdown: {
     // Подписи плашек ::: tip / ::: info / ::: warning / ::: danger / ::: details
@@ -118,4 +130,4 @@ export default defineConfig({
       }
     }
   }
-})
+}))
