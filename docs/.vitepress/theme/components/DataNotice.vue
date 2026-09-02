@@ -98,4 +98,12 @@ function accept() {
     text-align: center;
   }
 }
+
+/* При печати и выгрузке в PDF плашка не нужна: в headless-браузере экспортёра
+   localStorage пуст, поэтому она видима всегда и перекрывает текст страницы. */
+@media print {
+  .data-notice {
+    display: none !important;
+  }
+}
 </style>
